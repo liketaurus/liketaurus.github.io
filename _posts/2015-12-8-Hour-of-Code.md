@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Hour od code' 2015"
-date: 2015-11-24
+title: "Hour of code' 2015"
+date: 2015-12-8
 ---
 <p> Here is my slide deck from <a href='https://hourofcode.com'>Hour of Code</a>' 2015 that was taking place in Poltava polytechnical college by NTU "KhPI" at December 8, 2015.</p>
 
