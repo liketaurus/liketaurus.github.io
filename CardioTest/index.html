@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <link rel="icon" type="image/png" href="heart.png">
+
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+
+        <link rel="stylesheet" href="./css/style.css" type="text/css">      
+
+        <link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>        
+        <link href="css/jquery.mobile.icons-1.4.5.css" rel="stylesheet" type="text/css"/>        
+        <link href="css/jquery.mobile.structure-1.4.5.css" rel="stylesheet" type="text/css"/>
+        <link href="css/jquery.mobile.theme-1.4.5.css" rel="stylesheet" type="text/css"/>      
+        
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+        <script type="text/javascript">
+            $(window.document).bind("mobileinit", function () {
+                // Make your jQuery Mobile framework configuration changes here!
+                $.support.cors = true;
+                $.mobile.allowCrossDomainPages = true;
+                $.mobile.loadingmessage = "зачекайте...";
+                $.mobile.buttonMarkup.hoverDelay = false;
+            });
+        </script>               
+        <script src="js/jquery.mobile-1.4.5.js" type="text/javascript"></script>
+       
+        <title>Тест</title>
+
+        <script type="text/javascript">
+            var answers = [
+                0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0];
+
+            var result = 0;
+            var female = false;
+            var weight = 0;
+            var bmx = 0;
+
+        </script>
+    <body>
+        <div class="test">    
+
+            <div id="index" class="jobs" data-role="page">
+                <div data-role="header" data-position="fixed">
+                    <h2>Кардіотест</h2>
+                </div>
+                <div role="main" class="ui-content">
+                    <center><img src="img/--3W7k9jrc4.jpg" class="img-info" alt=""></center>
+                    <p align="justify">
+                        <font style="font-weight: bold">Іщемічна хвороба серця (ІХС)</font> - одна з актуальних проблем сучасності.<br/> <br/>
+                        Це навіть не одна хвороба, а ціла родина пов’язаних між собою захворювань, які є переважною причиною смерті населення індустріально розвинених країн. На жаль, Україна займає одне з перших місць у світі за смертністю від ІХС, тож краще заздалегідь подбати про обстеження на ІХС та відповідні профілактичні заходи. <br/><br/>
+                        Далі ви отримаєте 18 запитань, аналіз ваших відповідей на які дозволить зробити висновок про вашу приналежність до групи ризику захворювання на ІХС. <br/><br/>
+                        <font style="font-weight: bold">Майте на увазі, що цей тест не є офіційним діагностичним засобом, тож не робіть далекойдучих висновків на основі результатів тестування і у будь-якому випадку краще пройдіть обстеження у лікаря! </font><br/><br/>Бажаємо вам здоров’я!
+                    </p>
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed"  style="text-align:center;" data-theme="a"> 
+
+                    <a href="https://uk.m.wikipedia.org/wiki/%D0%86%D1%88%D0%B5%D0%BC%D1%96%D1%87%D0%BD%D0%B0_%D1%85%D0%B2%D0%BE%D1%80%D0%BE%D0%B1%D0%B0_%D1%81%D0%B5%D1%80%D1%86%D1%8F" 
+                       data-rel="external" target="_blank"
+                       id="left" class="ui-btn ui-corner-all">Детальніше</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test1">Почати</a>
+
+                </div>
+            </div>
+
+
+            <!--1-->
+            <div id="test1" class="jobs" data-role="page">
+
+                <div data-role="header" data-position="fixed">
+                    <p>Запитання 1 з 18</p>
+                </div>  <br/>  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Ваша стать</h1>
+                    <br/>
+                    <label><input type="radio" name="question1" id="choice1" onchange="answers[0] = 1;
+                            female = false;"/>Чоловіча</label>
+
+                    <label><input type="radio" name="question1" id="choice2" onchange="answers[0] = 0;
+                            female = true;"/>Жіноча</label>
+
+                    <progress value="1" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">   
+
+                    <a id="left" class="ui-btn ui-corner-all" href="index.html" >Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test2">Далі</a>
+
+                </div>            
+            </div>
+
+
+            <!--2-->
+            <div id="test2" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p>Запитання 2 з 18</p>
+                </div>
+                <br/>  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Ваш вік</h1>
+                    <br/>   
+                    <label><input type="radio" name="question2" id="choice1" onchange="answers[1] = 0;" />16-18</label>
+                    <label><input type="radio" name="question2" id="choice2" onchange=" answers[1] = 0;"/>18-25</label>
+                    <label><input type="radio" name="question2"  id="choice3" onchange=" answers[1] = 0;"/>25-30</label>
+                    <label><input type="radio" name="question2"  id="choice4" onchange=" answers[1] = 0;"/>30-40</label>
+                    <label><input type="radio" name="question2" id="choice5" onchange=" if (female == true) {
+                                answers[1] = 2;
+                            } else {
+                                answers[1] = 1;
+                            }"/>40-50</label>
+                    <label><input type="radio" name="question2" id="choice6" onchange=" if (female == true) {
+                                answers[1] = 2;
+                            } else {
+                                answers[1] = 1;
+                            }"/>50-60</label>
+                    <label><input type="radio" name="question2"  id="choice7" onchange=" if (female == true) {
+                                answers[1] = 2;
+                            } else {
+                                answers[1] = 1;
+                            }" />старше 60</label>
+
+                    <progress value="2" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test1">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test3">Далі</a>
+                </div>
+            </div> 
+
+
+            <!--3-->
+            <div id="test3" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p>Запитання 3 з 18</p>
+                </div>
+                <br/> 
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Вага вашого тіла, кг</h1>
+                    <br/> 
+
+                    <label>
+                        <input type="radio" name="question3" id="choice1" onchange="weight = 75;"/>
+                        60-75</label>
+                    <label>
+                        <input type="radio" name="question3" id="choice2" onchange="weight = 90;"/>
+                        75-90</label>
+                    <label>
+                        <input type="radio" name="question3" id="choice3" onchange="weight = 105;"/>
+                        90-105</label>
+                    <label>
+                        <input type="radio" name="question3" id="choice4" onchange="weight = 120;"/>
+                        більше 105</label>  
+
+
+                    <progress value="3" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test2">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test4">Далі</a>
+                </div> 
+            </div>
+
+
+            <!--4-->          
+            <div id="test4" data-role="page" class="jobs" >
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 4 з 19</p>
+                </div>	
+                <br/>
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Ваш зріст, см <br/>(це запитання потрібне аби визначити чи вага у нормі)</h1>
+                    </br>
+                    <label>
+                        <input type="radio" name="question4" id="choice1" onchange="bmx = weight / 1.70;" />
+                        165-170</label>
+                    <label>
+                        <input type="radio" name="question4" id="choice2" onchange="bmx = weight / 1.75;"/>
+                        170-175</label>
+                    <label>
+                        <input type="radio" name="question4" id="choice3" onchange="bmx = weight / 1.80;"/>
+                        175-180</label>
+                    <label>
+                        <input type="radio" name="question4" id="choice4" onchange="bmx = weight / 1.85;"/>
+                        180-185</label>
+                    <label>
+                        <input type="radio" name="question4" id="choice5" onchange="bmx = weight / 1.90;"/>
+                        185-190</label>
+                    <label>
+                        <input type="radio" name="question4" id="choice6" onchange="bmx = weight / 1.95;"/>
+                        більше 190</label>
+
+                    <progress value="4" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test3"> Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" onClick="
+                            if (bmx > 25) {
+                                answers[3] = 1;
+                            }
+                            ; //Engine(this.id);
+                            show('test5');
+                            show('test4')" href="#test5">Далі</a>
+                </div>
+            </div> 
+
+
+            <!--5-->
+            <div id="test5" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p>Запитання 5 з 18</p>
+                </div>                    
+                <br/>                  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Ваш рівень фізичної активності <br/>(знову перевірка ваги)</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question5" id="choice1" onchange="answers[4] = 2;" />
+                        не займаюсь спортом взагалі</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice2" onchange="answers[4] = 0;"/>
+                        багато ходжу пішки</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice3" onchange="answers[4] = 0;"/>
+                        іноді бігаю</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice4" onchange="answers[4] = 0;"/>
+                        роблю ранкову зарядку</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice5" onchange="answers[4] = -1;"/>
+                        систематично бігаю</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice6" onchange="answers[4] = -1;"/>
+                        іноді відвідую спортивну залу</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice7" onchange="answers[4] = -1;"/>
+                        систематично тренуюсь в залі</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice8" onchange="answers[4] = -1;"/>
+                        тренуюсь раз на день</label>
+                    <label>
+                        <input type="radio" name="question5" id="choice9" onchange="answers[4] = -1;"/>
+                        тренуюсь двічі на день</label>
+
+                    <progress value="5" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test4">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test6">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--6-->
+            <div id="test6" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 6 з 18</p>
+                </div>                    
+                <br/>  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи палите ви?</h1>
+                    <br/>
+                    <label>
+                        <input type="radio" name="question6" id="choice1" onchange="answers[5] = 1;"/>
+                        так</label>
+                    <label>
+                        <input type="radio" name="question6" id="choice2" onchange="answers[5] = 1;"/>
+                        іноді під час стресу</label>
+                    <label>
+                        <input type="radio" name="question6" id="choice3" onchange="answers[5] = 0;"/>
+                        ні, взагалі не палю</label>
+
+                    <progress value="6" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test5">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test7">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--7-->
+            <div id="test7" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 7 з 18</p>
+                </div>                    
+                <br/>  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи вживаєте ви алкоголь?</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question7" id="choice1" onchange="answers[6] = 1;"/>
+                        так, люблю випити</label>  
+                    <label>
+                        <input type="radio" name="question7" id="choice2" onchange="answers[6] = 1;"/>
+                        іноді, в компаніях</label>  
+                    <label>
+                        <input type="radio" name="question7" id="choice3" onchange="answers[6] = 0;"/>
+                        ні, взагалі не вживаю</label>
+
+
+                    <progress value="7" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">			
+                    <a id="left" class="ui-btn ui-corner-all" href="#test6">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test8">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--8-->
+            <div id="test8" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 8 з 18</p>
+                </div>                    
+                <br/>                  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи страждаєте ви на підвищений артеріальний тиск?</h1>
+                    <br/>
+                    <label>
+                        <input type="radio" name="question8" id="choice1" onchange="answers[7] = 1;"/>
+                        так</label>     
+                    <label>
+                        <input type="radio" name="question8" id="choice2" onchange="answers[7] = 0;"/>
+                        ні</label>
+
+                    <progress value="8" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test7">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test9">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--9-->
+            <div id="test9" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 9 з 18</p>
+                </div>                    
+                <br/>   
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи страждаєте ви на цукровий  діабет?</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question9" id="choice1" onchange="answers[8] = 1;"/>
+                        так</label>  
+                    <label>
+                        <input type="radio" name="question9" id="choice2" onchange="answers[8] = 0;"/>
+                        ні</label>
+
+                    <progress value="9" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test8">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test10">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--10-->
+            <div id="test10" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 10 з 18</p>
+                </div>
+                <br/>   
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи є в вашій родині люди, які страждають на серцево-судинні захворювання (спадковість)?</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question10" id="choice1" onchange="answers[9] = 1;"/>
+                        так</label>  
+                    <label>
+                        <input type="radio" name="question10" id="choice2" onchange="answers[9] = 0;"/>
+                        ні</label>                                
+
+                    <progress value="10" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test9">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test11">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--11-->
+            <div id="test11" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 11 з 18</p>
+                </div>
+                <br/>   
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи відчували ви протягом останніх двох тижнів біль в грудях, пов’язану з фізичним навантаженням або стресовими ситуаціями?</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question11" id="choice1" onchange="answers[10] = 1;"/>
+                        так</label>  
+                    <label>
+                        <input type="radio" name="question11" id="choice2" onchange="answers[10] = 0;"/>
+                        ні</label>
+
+                    <progress value="11" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test10">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test12">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--12-->
+            <div id="test12" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 12 з 18</p>
+                </div>
+                <br/>  <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи відчували ви протягом останніх двох тижнів біль в грудях, пов’язану з виходом на холод або переохолодженням?</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question12" id="choice1" onchange="answers[11] = 1;"/>
+                        так</label>
+                    <label>
+                        <input type="radio" name="question12" id="choice2" onchange="answers[11] = 0;"/>
+                        ні</label>
+
+                    <progress value="12" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			        
+                </div>                
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test11">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test13">Далі</a>
+                </div> 
+
+            </div>
+
+
+            <!--13-->
+            <div id="test13" data-role="page" class="jobs" >
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 13 з 18</p>
+                </div>
+                <br/>                  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи відчували ви протягом останніх двох тижнів задишку?</h1>
+                    <br/>
+                    <label>
+                        <input type="radio" name="question13" id="choice1" onchange="answers[12] = 1;"/>
+                        так</label>
+                    <label>
+                        <input type="radio" name="question13" id="choice2" onchange="answers[12] = 0;"/>
+                        ні</label>
+
+                    <progress value="13" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test12">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test14">Далі</a>
+                </div> 
+
+            </div>
+
+
+            <!--14-->
+            <div id="test14" data-role="page" class="jobs" >
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 14 з 18</p>
+                </div>
+                <br/>                  
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи відчували ви протягом останніх двох тижнів перебої в роботі серця, порушення серцебиття, слабкість?</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question14" id="choice1" onchange="answers[13] = 1;"/>
+                        так</label>
+                    <label>
+                        <input type="radio" name="question14" id="choice2" onchange="answers[13] = 0;" />
+                        ні</label>  
+
+                    <progress value="14" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test13">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test15">Далі</a>
+                </div> 
+
+            </div>
+
+
+            <!--15-->
+            <div id="test15" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 15 з 18</p>
+                </div><br/>
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Чи відчували ви протягом останніх двох тижнів ознаки серцевої недостатності, наприклад, набряки, що починаються з нижніх кінцівок? </h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question15" id="choice1" onchange="answers[14] = 1;"/>
+                        так</label>  
+                    <label>
+                        <input type="radio" name="question15" id="choice2" onchange="answers[14] = 0;"/>
+                        ні</label>
+
+                    <progress value="15" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test14">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test16">Далі</a>
+                </div> 
+            </div>
+
+
+            <!--16-->
+            <div id="test16" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p>Запитання 16 з 18</p>
+                </div>
+                <br/>
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Як часто протягом останніх двох тижнів ви відчували проблеми зі сном, безсоння або пересипання?</h1>
+                    <br/>
+                    <label>
+                        <input type="radio" name="question16" id="choice1" onchange="answers[15] = 1;" />
+                        майже кожен день</label>                            
+                    <label>
+                        <input type="radio" name="question16" id="choice2" onchange="answers[15] = 1;"/>
+                        більше тижня</label>
+                    <label>
+                        <input type="radio" name="question16" id="choice3" onchange="answers[15] = 1;"/>
+                        кілька днів</label>        
+                    <label>
+                        <input type="radio" name="question16" id="choice4" onchange="answers[15] = 0;" />
+                        ні</label>
+
+                    <progress value="16" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test15">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test17">Далі</a>
+                </div>
+
+            </div> 
+
+
+            <!--17-->
+            <div id="test17" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p >Запитання 17 з 18</p>
+                </div>
+                <br/>
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Як часто протягом останніх двох тижнів ви відчували зниження або підвищення апетиту?</h1>
+                    <br/>
+                    <label>
+                        <input type="radio" name="question17" id="choice1" onchange="answers[16] = 1;"/>
+                        майже кожен день</label>
+                    <label>
+                        <input type="radio" name="question17" id="choice2" onchange="answers[16] = 1;"/>
+                        більше тижня</label>
+                    <label>
+                        <input type="radio" name="question17" id="choice3" onchange="answers[16] = 1;"/>
+                        кілька днів</label>
+                    <label>
+                        <input type="radio" name="question17" id="choice4" onchange="answers[16] = 0;"/>
+                        ні</label>
+
+                    <progress value="17" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a id="left" class="ui-btn ui-corner-all" href="#test16">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" href="#test18">Далі</a>
+                </div> 
+
+            </div>
+
+
+            <!--18-->
+            <div id="test18" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed">
+                    <p>Запитання 18 з 18</p>
+                </div>
+                <br/>
+                <div data-role="main" class="ui-content">
+                    <h1 class="question">Як часто протягом останніх двох тижнів ви відчували втому, нестачу енергії?</h1>
+                    <br/>
+
+                    <label>
+                        <input type="radio" name="question18" id="choice1" onchange="answers[17] = 1;" />
+                        майже кожен день</label>
+                    <label>
+                        <input type="radio" name="question18" id="choice2" onchange="answers[17] = 1;"/>
+                        більше тижня</label>
+                    <label>
+                        <input type="radio" name="question18" id="choice3" onchange="answers[17] = 1;"/>
+                        кілька днів</label>
+                    <label>
+                        <input type="radio" name="question18" id="choice4" onchange="answers[17] = 0;"/>
+                        ні</label>
+
+
+                    <progress value="18" max="18" style="bottom: 60px; left: 15%;position: fixed;width: 70%;"></progress>			
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+
+                    <a id="left" class="ui-btn ui-corner-all" href="#test17">Назад</a>
+                    <a id="right" class="ui-btn ui-corner-all" onClick="
+                            result = 0;
+                            for (i = 0; i < answers.length; i++)
+                            {
+                                result = result + answers[i];
+                            }
+                            $('#Txt').html(result);
+                            //alert(result);
+                            $('#res').addClass('question');
+                            $('#res').css('margin-left', '5%');
+                            $('#res').css('margin-right', '5%');
+                            if (result <= 6)
+                            {
+                                $('#res').html('Вітаємо, схоже що у вас дуже здорове та міцне серце! <br/>Однак, все ж радимо не пропускати планових щорічних медоглядів!');
+                                $('#res').css('color', 'green');
+                            }
+                            if (result > 6 && result <= 12)
+                            {
+                                $('#res').html('Схоже, ви в порядку. <br/>Однак, радимо серйозніше ставитись до занять спортом, виключити шкідливі звички і все ж таки про всяк випадок обстежитись у кардіолога.<br/>І не пропускайте планових щорічних медоглядів!');
+                                // $('#res').addClass('question');
+                                $('#res').css('color', 'blue');
+                            }
+                            if (result > 12)
+                            {
+                                $('#res').html('Схоже, ви знаходитесь у зоні ризику серцевих захворювань.<br/> Можливо, ви в порядку, однак все ж таки радимо обстежитись у кардіолога.<br/> І не пропускайте планових щорічних медоглядів!');
+                                // $('#res').addClass('question');
+                                $('#res').css('color', 'red');
+                            }
+                            show('otv1');
+                            show('test18');" href="#otv1">Результати</a>
+
+                </div>
+
+            </div> 
+
+
+            <!--Результат-->
+            <div id="otv1" data-role="page" class="jobs">
+                <div data-role="header" data-position="fixed" >
+                    <p>Результат</p>
+                </div>
+                <div data-role="main" class="ui-content">
+                    <center> <img src="img/done.jpg"  class="img-info" alt=""/></center>
+                    <p class="question">За результатами тестування Ви набрали <font style="font-weight: bold"> <span id = "Txt">0</span>  балів з 18</font>.<br>
+                    <p id="res" class="question"></p> 
+                    <!--<p style="font-style: italic; margin-right: 5%; bottom: 70px; position: fixed; left:60%;">З повагою,<br/> авторський колектив</p>-->        
+                </div>
+                <div data-role="footer" data-id="myfooter" data-position="fixed" style="text-align:center;" data-theme="a">
+                    <a class="ui-btn ui-corner-all" data-transition="flip" href="#about" style="width:60%">Про нас</a>
+
+                </div>
+            </div>
+
+            <div id="about" data-role="page" data-dialog="true">
+                <div data-role="header">
+                    <h1>Автори</h1>
+                </div>
+                <div data-role="content">                  
+                    <center><img src="img/PPC.PNG" class="img-info" alt="" style="width: 40; height: 90"></center>
+                    <p align="center">
+                        <font style="font-weight: bold">Полтавський політехнічний коледж</font><br/>Національного технічного університету<br/>"Харківський політехнічний інститут<br/>
+                        <br/>
+                        <font style="font-weight: bold">Бабич О.В. <br/>Москаленко Є. <br/>Маринич Р.<br/>&copy; 2016</font>
+                        <br/>
+                        <a href="http://www.polytechnic.poltava.ua" data-rel="external" target="_blank"><img src="css/images/icons-png/info-black.png" alt=""/> www.polytechnic.poltava.ua</a><br/>                        
+                        <a href="mailto:info@polytechnic.poltava.ua" data-rel="external" onclick="window.open('mailto:info@polytechnic.poltava.ua', '_system')"><img src="css/images/icons-png/mail-black.png" alt=""/> info@polytechnic.poltava.ua</a><br/>
+                        <a href="tel:+380532272881" data-rel="external" onclick="window.open('tel:+380532272881', '_system')"><img src="css/images/icons-png/phone-black.png" alt=""/> +38(05322)7-28-81</a>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CardioTest </title>
+        <!--meta charset="UTF-8"-->
+        <!--meta name="viewport" content="width=device-width"-->
+        <link rel="stylesheet" type="text/css" href="./jquery.devicemock/css/jquery.devicemock.css">
+        <script type="text/javascript" src="./CardioTest/js/jquery-2.1.4.min.js"></script>
+        <!--script type="text/javascript" src="./CardioTest/js/jquery.mobile-1.4.5.min.js"></script-->
+
+               <script src="./jquery.devicemock/jquery.devicemock.1.0.0.js"></script>
+    </head>
+    <body><center>
+        <div class="selector">
+            <center>
+                <iframe src="./CardioTest/index.html"/></iframe>  </center>
+        </div></center>
+    <script type="text/javascript">
+            $('.selector').deviceMock({
+                type: 'phone', // browser , phone , tablet , desktop , laptop
+                size: '3x', // null(1x) , 2x , 3x , 4x , 5x
+                theme: 'black', // black , white (if phone or tablet)
+                orientation: 'portrait', // landscape , portrait (if phone or tablet)
+                address: 'http://example123.com' // show on URL BAR
+            });
+    </script>
+</body>
+</html>
