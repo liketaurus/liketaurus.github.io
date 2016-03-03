@@ -20,10 +20,10 @@ and open the template in the editor.
             <iframe id="mobile" src="./CardioTest/index.html" style="border:none; overflow:hidden;" scrolling="no" onload="AdjustIframeHeightOnLoad()"></iframe>  
                 <script type="text/javascript">
                     function AdjustIframeHeightOnLoad() {
-                        document.getElementById("mobile").style.height = document.getElementById("mobile").contentWindow.document.body.scrollHeight + "px";
+                        $("#mobile").style.height = $("#mobile").contentWindow.document.body.scrollHeight + "px";
                     }
                     function AdjustIframeHeight(i) {
-                        document.getElementById("mobile").style.height = parseInt(i) + "px";
+                        $("#mobile").style.height = parseInt(i) + "px";
                     }
                 </script>
         </div></center>
