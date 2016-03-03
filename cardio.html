@@ -17,15 +17,8 @@ and open the template in the editor.
     </head>
     <body><center>
         <div class="selector">            
-            <iframe id="mobile" src="./CardioTest/index.html" style="border:none; overflow:hidden; width:100%;" scrolling="no" onload="AdjustIframeHeightOnLoad()"></iframe>  
-                <script type="text/javascript">
-                    function AdjustIframeHeightOnLoad() {
-                        $("#mobile").style.height = $("#mobile").contentWindow.document.body.scrollHeight*4 + "px";
-                    }
-                    function AdjustIframeHeight(i) {
-                        $("#mobile").style.height = parseInt(i) + "px";
-                    }
-                </script>
+            <iframe id="mobile" src="./CardioTest/index.html" style="border:none; overflow:hidden; width:100%; height:400%;" scrolling="no"></iframe>  
+                
         </div></center>
     <script type="text/javascript">
         $('.selector').deviceMock({
