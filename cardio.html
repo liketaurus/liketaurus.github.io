@@ -16,14 +16,14 @@ and open the template in the editor.
         <script src="./jquery.devicemock/jquery.devicemock.1.0.0.js"></script>
     </head>
     <body><center>
-        <div class="selector">            
-            <iframe src="./CardioTest/index.html" onload="AdjustIframeHeightOnLoad()"></iframe>  
+        <div id="mobile" class="selector">            
+            <iframe src="./CardioTest/index.html" style="border:none; overflow:hidden;" scrolling="no" onload="AdjustIframeHeightOnLoad()"></iframe>  
                 <script type="text/javascript">
                     function AdjustIframeHeightOnLoad() {
-                        document.getElementById("form-iframe").style.height = document.getElementById("form-iframe").contentWindow.document.body.scrollHeight + "px";
+                        document.getElementById("mobile").style.height = document.getElementById("mobile").contentWindow.document.body.scrollHeight + "px";
                     }
                     function AdjustIframeHeight(i) {
-                        document.getElementById("form-iframe").style.height = parseInt(i) + "px";
+                        document.getElementById("mobile").style.height = parseInt(i) + "px";
                     }
                 </script>
         </div></center>
