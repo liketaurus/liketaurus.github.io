@@ -17,7 +17,7 @@ and open the template in the editor.
     </head>
     <body><center>
         <div class="selector">            
-            <iframe id="mobile" src="./CardioTest/index.html" style="border:none; overflow:hidden;" scrolling="no" onload="AdjustIframeHeightOnLoad()"></iframe>  
+            <iframe id="mobile" src="./CardioTest/index.html" style="border:none; overflow:hidden; width:100%;" scrolling="no" onload="AdjustIframeHeightOnLoad()"></iframe>  
                 <script type="text/javascript">
                     function AdjustIframeHeightOnLoad() {
                         $("#mobile").style.height = $("#mobile").contentWindow.document.body.scrollHeight + "px";
@@ -30,7 +30,7 @@ and open the template in the editor.
     <script type="text/javascript">
         $('.selector').deviceMock({
             type: 'phone', // browser , phone , tablet , desktop , laptop
-            size: '4x', // null(1x) , 2x , 3x , 4x , 5x
+            size: '5x', // null(1x) , 2x , 3x , 4x , 5x
             theme: 'black', // black , white (if phone or tablet)
             orientation: 'portrait', // landscape , portrait (if phone or tablet)
             address: 'http://polytechnic.poltava.ua' // show on URL BAR
