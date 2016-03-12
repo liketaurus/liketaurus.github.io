@@ -20,13 +20,17 @@ and open the template in the editor.
         <script src="./jquery.devicemock/jquery.devicemock.1.0.0.js"></script>
         <script>
             $('#sel').attr("selected", "selected");
-            
-            var dirty_bit = $('#page_is_dirty');
-            if (dirty_bit.value == '1')
-                window.location.reload();
+            function pageShown(evt) {
+                var dirty_bit = $('#page_is_dirty');
+                if (dirty_bit.value == '1')
+                    window.location.reload();
+                if (evt.persisted)
+                    window.location.reload();
+            }
             function mark_page_dirty() {
                 dirty_bit.value = '1';
             }
+            window.addEventListener("pageshow", pageShown, false);
         </script>
     </head>    
     <body>
