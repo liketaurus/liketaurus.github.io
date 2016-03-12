@@ -18,8 +18,15 @@ and open the template in the editor.
         </style>
 
         <script src="./jquery.devicemock/jquery.devicemock.1.0.0.js"></script>
-        <script>            
-            $('#sel').attr("selected","selected");
+        <script>
+            $('#sel').attr("selected", "selected");
+            
+            var dirty_bit = $('#page_is_dirty');
+            if (dirty_bit.value == '1')
+                window.location.reload();
+            function mark_page_dirty() {
+                dirty_bit.value = '1';
+            }
         </script>
     </head>    
     <body>
@@ -31,7 +38,7 @@ and open the template in the editor.
                                 if ($('#flip-min').val() === 'off')
                                 {
                                     window.location.href = 'http://liketaurus.github.io/CardioTest/index.html';
-                                }                                
+                                }
                             }">                        
                         <option  value="off">Ні</option>                        
                         <option id="sel" value="on" selected="selected">Так</option>
@@ -52,5 +59,9 @@ and open the template in the editor.
             address: 'http://polytechnic.poltava.ua' // show on URL BAR
         });
     </script>
+
+    <form name="ignore_me">
+        <input type="hidden" id="page_is_dirty" name="page_is_dirty" value="0" />
+    </form>
 </body>
 </html>
