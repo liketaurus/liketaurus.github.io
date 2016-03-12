@@ -31,12 +31,8 @@ and open the template in the editor.
                     <label for="flip-min">Імітувати телефон:</label>
                     <select name="flip-min" id="flip-min" data-role="slider"  onchange="{
                                 if ($('#flip-min').val() === 'off')
-                                {
-                                    $('#flip-min').selectedIndex=0;
-                                    $('#sel').attr('selected', 'selected');
-                                    var url = 'http://liketaurus.github.io/CardioTest/index.html';
-                                    window.open(url, '_blank');
-                                    //window.location.href = 'http://liketaurus.github.io/CardioTest/index.html';
+                                {                                    
+                                    window.location.href = 'http://liketaurus.github.io/CardioTest/index.html';
                                 }
                             }">                        
                         <option  value="off">Ні</option>                        
