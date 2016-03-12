@@ -12,10 +12,30 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="./jquery.devicemock/css/jquery.devicemock.css">
         <script type="text/javascript" src="./CardioTest/js/jquery-2.1.4.min.js"></script>
         <!--script type="text/javascript" src="./CardioTest/js/jquery.mobile-1.4.5.min.js"></script-->
+        <style>
+            .containing-element .ui-slider-switch { width: 9em }
+        </style>
 
         <script src="./jquery.devicemock/jquery.devicemock.1.0.0.js"></script>
-    </head>
-    <body><center>
+    </head>    
+    <body>
+        <div style="text-align: right;top:20px;">
+            <fieldset>
+                <div data-role="fieldcontain">
+                    <label for="flip-min">Імітувати телефон:</label>
+                    <select name="flip-min" id="flip-min" data-role="slider" onchange="{
+                                if ($('#flip-min').val() === 'off')
+                                {
+                                    window.location.href = 'http://liketaurus.github.io/CardioTest/index.html';
+                                }                                
+                            }">
+                        <option value="off">Вимкнено</option>
+                        <option value="on">Увімкнено</option>
+                    </select>
+                </div>
+            </fieldset>
+        </div>
+    <center>
         <div class="selector">            
             <iframe id="mobile" src="./CardioTest/index.html" style="border:none; overflow:hidden; width:100%; height:599px;" frameborder="0" scrolling="yes" ></iframe>                  
         </div></center>
