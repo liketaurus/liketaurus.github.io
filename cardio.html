@@ -13,13 +13,14 @@ and open the template in the editor.
         <link href="CardioTest/css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css"/>
         <script type="text/javascript" src="./CardioTest/js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="./CardioTest/js/jquery.mobile-1.4.5.min.js"></script>
-        
+
 
         <script src="./jquery.devicemock/jquery.devicemock.1.0.0.js"></script>
         <script>
             $('#sel').attr("selected", "selected");
-            window.onbeforeunload = function () { }
-            
+            window.onbeforeunload = function () {
+            }
+
         </script>
     </head>    
     <body>
@@ -29,13 +30,14 @@ and open the template in the editor.
                     <label for="flip-min">Імітувати телефон:</label>
                     <select name="flip-min" id="flip-min" data-role="slider"  onchange="{
                                 if ($('#flip-min').val() === 'off')
-                                {                                    
+                                {
                                     window.location.href = 'http://liketaurus.github.io/CardioTest/index.html';
                                 }
                             }">                        
                         <option  value="off">Ні</option>                        
                         <option id="sel" value="on" selected="selected">Так</option>
-                    </select> <strong>УВАГА!</strong> Якщо Ви почали відповідати на запитання тесту, Вам доведеться почати знову!
+                    </select> 
+                    <div style="text-align: left;"><strong>УВАГА!</strong> Якщо Ви почали відповідати на запитання тесту, Вам доведеться почати знову!</div>
                 </div>
             </fieldset>
         </div>
