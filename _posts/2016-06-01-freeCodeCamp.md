@@ -10,6 +10,9 @@ date: 2016-06-01
 From the middle of March I make a  deep dive to Front End Developer Certification from  [freeCodeCamp], and now still at the way to my Daya Visualization Certificate.
 More details you can find [in my blog]
 
+My certificate:
+<center>
+<div id="name" class="cert-name">Alexander Babich</div><img id="cert" src="//i.imgur.com/ToFZKBd.jpg" class="img-abs"/><div class="cert-date">March 29, 2016</div><div class="cert-link">verify this certification at: http://freecodecamp.com/liketaurus/front-end-certification</div></center>
 
 [freeCodeCamp]: http://productivityblog.com.ua/?p=2327
 [in my blog]: http://productivityblog.com.ua/?p=2303
