@@ -11,7 +11,7 @@ Here is my certificate:
 <center>
 <img src="/files/data-visualization.png" border="0" width="574">
 </center>
-
 <br>
+
 [freeCodeCamp]: http://productivityblog.com.ua/?p=2327
 [Data Visualization certificate]: https://www.freecodecamp.com/liketaurus/data-visualization-certification
