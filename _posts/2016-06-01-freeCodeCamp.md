@@ -11,7 +11,9 @@ From the middle of March I make a  deep dive to Front End Developer Certificatio
 More details you can find [in my blog]
 
 My certificate:
-
+<center>
+<img src="/files/front-end.png" border="0" width="574">
+</center>
 
 [freeCodeCamp]: http://productivityblog.com.ua/?p=2327
 [in my blog]: http://productivityblog.com.ua/?p=2303
