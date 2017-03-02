@@ -11,8 +11,11 @@ From the middle of March I make a  deep dive to Front End Developer Certificatio
 More details you can find [in my blog]
 
 My certificate:
+
 <center>
-<style>@font-face {
+<style>
+
+@font-face {
   font-family: "Sax Mono";
   src: url("/fonts/saxmono.ttf") format("truetype");
 }
@@ -54,13 +57,17 @@ body {
   position: absolute;
   top: 1488px;
   z-index: 1000;
-}</style><div id="name" class="cert-name">Alexander Babich</div><img id="cert" src="http://i.imgur.com/ToFZKBd.jpg" class="img-abs"/><div class="cert-date">March 29, 2016</div><div class="cert-link">verify this certification at: http://freecodecamp.com/liketaurus/front-end-certification</div><script>(function() {
+}
+</style>
+
+<div id="name" class="cert-name">Alexander Babich</div><img id="cert" src="http://i.imgur.com/ToFZKBd.jpg" class="img-abs"/><div class="cert-date">March 29, 2016</div><div class="cert-link">verify this certification at: http://freecodecamp.com/liketaurus/front-end-certification</div><script>(function() {
   var containerWidth = document.getElementById('cert').offsetWidth;
   var nameDiv = document.getElementById('name');
   var nameWidth = nameDiv.offsetWidth;
   console.log(containerWidth, nameWidth);
   nameDiv.style.left = ((containerWidth - nameWidth) / 2) + 15;
-})();</script></center>
+})();</script>
+</center>
 
 [freeCodeCamp]: http://productivityblog.com.ua/?p=2327
 [in my blog]: http://productivityblog.com.ua/?p=2303
