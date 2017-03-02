@@ -10,10 +10,11 @@ date: 2016-06-01
 From the middle of March I make a  deep dive to Front End Developer Certification from  [freeCodeCamp], and now still at the way to my Daya Visualization Certificate.
 More details you can find [in my blog]
 
-My certificate:
+Here is my my certificate:
 <center>
 <img src="/files/front-end.png" border="0" width="574">
 </center>
+<br>
 
 [freeCodeCamp]: http://productivityblog.com.ua/?p=2327
 [in my blog]: http://productivityblog.com.ua/?p=2303
